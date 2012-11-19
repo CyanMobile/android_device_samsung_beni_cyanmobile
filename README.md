@@ -7,5 +7,5 @@ Device config to compile CyanMobile for galaxy fit(beni)
 Current progress 
 
 
-Everything a functional
+Everything is functional
 
