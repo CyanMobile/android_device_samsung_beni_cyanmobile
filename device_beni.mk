@@ -128,10 +128,10 @@ PRODUCT_COPY_FILES += \
  	 
 PRODUCT_COPY_FILES += \
  	 
-    device/samsung/tass/prebuilt/70zipalign:system/etc/init.d/70zipalign \	 
-    device/samsung/tass/prebuilt/zipalign:system/bin/zipalign \
-    device/samsung/tass/prebuilt/be_photo:system/etc/be_photo \
-    device/samsung/tass/prebuilt/be_movie:system/etc/be_movie
+    device/samsung/beni/prebuilt/70zipalign:system/etc/init.d/70zipalign \	 
+    device/samsung/beni/prebuilt/zipalign:system/bin/zipalign \
+    device/samsung/beni/prebuilt/be_photo:system/etc/be_photo \
+    device/samsung/beni/prebuilt/be_movie:system/etc/be_movie
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
