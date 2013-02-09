@@ -49,6 +49,17 @@ BOARD_FORCE_STATIC_A2DP := true
 HAS_BCM20780 := true
 BOARD_GLOBAL_CFLAGS += -DHAS_BCM20780
 
+
+## Kernel, bootloader
+TARGET_BOOTLOADER_BOARD_NAME := beni
+TARGET_KERNEL_CONFIG := cyanogenmod_beni_defconfig
+TARGET_PREBUILT_KERNEL := device/samsung/beni/kernel
+TARGET_PREBUILT_RECOVERY_KERNEL := device/samsung/beni/recovery_kernel
+TARGET_KERNEL_SOURCE := kernel/samsung/msm7x27
+TARGET_KERNEL_CONFIG := beni_cm_rev00_defconfig
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
+
+
 # WiFi
 BOARD_WPA_SUPPLICANT_DRIVER := AWEXT
 BOARD_WLAN_DEVICE           := ar6000
@@ -63,6 +74,11 @@ BOARD_USE_SCREENCAP:= true
 BOARD_MOBILEDATA_INTERFACE_NAME:= "pdp0"
 TARGET_WEBCORE_ENABLE_GIF := true
 
+
+
+
+
+
 # FM Radio
 BOARD_HAVE_FM_RADIO := true
 BOARD_GLOBAL_CFLAGS += -DHAVE_FM_RADIO
@@ -73,15 +89,16 @@ BOARD_KERNEL_CMDLINE :=
 BOARD_KERNEL_BASE := 0x13600000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_PAGE_SIZE := 0x00001000
-TARGET_PREBUILT_KERNEL := device/samsung/beni/kernel	
 TARGET_RECOVERY_INITRC := device/samsung/beni/recovery.rc
 
-TARGET_PREBUILT_RECOVERY_KERNEL := device/samsung/beni/recovery_kernel
+
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/beni/recovery/recovery_ui.c
 BOARD_CUSTOM_GRAPHICS           := ../../../device/samsung/beni/recovery/graphics.c
 BOARD_USE_USB_MASS_STORAGE_SWITCH := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/usb_mass_storage/gadget/lun"
 BOARD_UMS_LUNFILE := "/sys/devices/platform/usb_mass_storage/lun0/file"
+
+#BOARD_CUSTOM_USB_CONTROLLER := ../../device/samsung/beni/UsbController.cpp
 
 TARGET_PROVIDES_LIBAUDIO := true
 
@@ -104,7 +121,7 @@ TARGET_LIBAGL_USE_GRALLOC_COPYBITS := true
 BOARD_GPS_LIBRARIES := libloc_api
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QCOM_LIBS := true
-BOARD_USES_QCOM_GPS := true		
+BOARD_USES_QCOM_GPS := true  	
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := beni
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 1240
 BOARD_GPS_NEEDS_XTRA := true
