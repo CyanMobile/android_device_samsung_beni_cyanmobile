@@ -124,14 +124,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/beni/prebuilt/sec_jack.kl:system/usr/keylayout/sec_jack.kl \
     device/samsung/beni/prebuilt/sec_key.kl:system/usr/keylayout/sec_key.kl \
     device/samsung/beni/prebuilt/sec_key.kcm.bin:system/usr/keychars/sec_key.kcm.bin
-## Tweaks
- 	 
-PRODUCT_COPY_FILES += \
- 	 
-    device/samsung/beni/prebuilt/70zipalign:system/etc/init.d/70zipalign \	 
-    device/samsung/beni/prebuilt/zipalign:system/bin/zipalign \
-    device/samsung/beni/prebuilt/be_photo:system/etc/be_photo \
-    device/samsung/beni/prebuilt/be_movie:system/etc/be_movie
+
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
